@@ -1,0 +1,71 @@
+@import url("https://stijndv.com/fonts/Eudoxus-Sans.css");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body,
+  :root {
+    height: 100%;
+  }
+  :root {
+    --font-eudoxus-sans: "Eudoxus Sans", ui-sans-serif, system-ui, -apple-system,
+      "Segoe UI", sans-serif;
+  }
+
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer utilities {
+  .max-container {
+    @apply mx-auto max-w-[1600px]; /* 1600px | 1440px */
+  }
+
+  .center-2xl {
+    @apply 2xl:flex 2xl:h-full 2xl:items-center 2xl:justify-center;
+  }
+
+  .center-sm {
+    @apply max-sm:flex max-sm:h-full max-sm:items-center max-sm:justify-center max-sm:py-6;
+  }
+
+  .flexStart {
+    @apply flex justify-start items-center;
+  }
+
+  .flexBetween {
+    @apply flex justify-between items-center;
+  }
+
+  .flexCenter {
+    @apply flex justify-center  items-center;
+  }
+
+  .flexEnd {
+    @apply flex justify-end items-center;
+  }
+
+  .no-focus {
+    @apply focus-visible:ring-0 focus-visible:ring-transparent focus-visible:ring-offset-0 !important;
+  }
+
+  .main-scrollbar::-webkit-scrollbar {
+    @apply w-10 h-3;
+  }
+
+  .main-scrollbar::-webkit-scrollbar-track {
+    @apply bg-[hsl(0,0%,80%)] dark:bg-[#424242];
+  }
+
+  .main-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-[#888] dark:bg-[#686868];
+  }
+
+  .main-scrollbar::-webkit-scrollbar-thumb:hover {
+    @apply bg-[#686868] dark:bg-[hsl(0,0%,51%)];
+  }
+}
