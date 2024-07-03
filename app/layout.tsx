@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { Figtree } from "next/font/google";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
+import { ModalProvider } from "@/providers/modal-provider";
 
 const figtree = Figtree({ subsets: ["latin"], variable: "--font-figtree" });
 
@@ -20,6 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${figtree.variable} max-container font-sans`}>
+        <ModalProvider />
         <Navbar />
         {children}
         <Footer />
