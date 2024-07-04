@@ -5,6 +5,7 @@ import { Figtree } from "next/font/google";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { ModalProvider } from "@/providers/modal-provider";
+import { ToastProvider } from "@/providers/toast-provider";
 
 const figtree = Figtree({ subsets: ["latin"], variable: "--font-figtree" });
 
@@ -22,6 +23,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${figtree.variable} max-container font-sans`}>
         <ModalProvider />
+        <ToastProvider />
         <Navbar />
         {children}
         <Footer />
