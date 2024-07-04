@@ -21,7 +21,7 @@ export const Modal = ({ open, onClose, children }: ModalProps) => {
     <Transition show={open} appear as={Fragment}>
       <Dialog as="div" onClose={onClose} className="relative z-10">
         <div className="fixed inset-0 bg-black/50" />
-        <div className="fixed inset-0 overflow-y-auto">
+        <div className="fixed inset-0 overflow-y-hidden">
           <div className="flex min-h-full items-center justify-center p-4 text-center">
             <TransitionChild
               as={Fragment}
