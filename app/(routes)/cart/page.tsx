@@ -8,12 +8,11 @@ import { Summary } from "./summary";
 
 const CartPage = () => {
   const [isMounted, setIsMounted] = useState(false);
+  const cart = useCart();
 
   useEffect(() => {
     setIsMounted(true);
   }, []);
-
-  const cart = useCart();
 
   if (!isMounted) return null;
 
@@ -35,7 +34,7 @@ const CartPage = () => {
                 ))}
               </ul>
             </div>
-            <Summary />
+            {cart.items.length > 0 && <Summary />}
           </div>
         </div>
       </Container>
