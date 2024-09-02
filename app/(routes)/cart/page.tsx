@@ -34,7 +34,11 @@ const CartPage = () => {
                 ))}
               </ul>
             </div>
-            {cart.items.length > 0 && <Summary />}
+            {cart.items.length > 0 && (
+              <div className="space-y-4 lg:col-span-5">
+                <Summary />
+              </div>
+            )}
           </div>
         </div>
       </Container>
