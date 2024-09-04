@@ -46,9 +46,8 @@ const MpesaPaymentPage = () => {
       if (response.data.ResponseCode === "0") {
         toast.success("Mpesa prompt sent to your phone.");
       } else {
-        toast.error(
-          `Payment initiation failed: ${response.data.ResponseDescription}`
-        );
+        toast.error(`Payment initiation failed`);
+        console.log(response.data.ResponseDescription);
       }
     } catch (error) {
       toast.error("Something went wrong.");
